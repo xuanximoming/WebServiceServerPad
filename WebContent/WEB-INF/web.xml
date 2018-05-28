@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+         http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<servlet>
+		<servlet-name>getEmrDoc</servlet-name>
+		<servlet-class>com.pad.servlet.ReadBlobPdfServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getEmrDoc</servlet-name>
+		<url-pattern>/getEmrDoc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>displayPDF</servlet-name>
+		<servlet-class>com.pad.servlet.DisplayPDFServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>displayPDF</servlet-name>
+		<url-pattern>/displayPDF</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>getEmrPDFPath</servlet-name>
+		<servlet-class>com.pad.servlet.getEmrPDFPathServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getEmrPDFPath</servlet-name>
+		<url-pattern>/getEmrPDFPath</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>downPDFDoc</servlet-name>
+		<servlet-class>com.pad.servlet.downPDFDocServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>downPDFDoc</servlet-name>
+		<url-pattern>/downPDFDoc</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>XFireServlet</servlet-name>
+		<servlet-class>org.codehaus.xfire.transport.http.XFireConfigurableServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>XFireServlet</servlet-name>
+		<url-pattern>/services/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>AndroidVersionServlet</servlet-name>
+		<servlet-class>com.servlet.AndroidVersionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AndroidVersionServlet</servlet-name>
+		<url-pattern>/servlet/AndroidVersionServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ServletConfigurator</servlet-name>
+		<servlet-class>
+			org.logicalcobwebs.proxool.configuration.ServletConfigurator
+		</servlet-class>
+		<init-param>
+			<param-name>propertyFile</param-name>
+			<param-value>
+				WEB-INF/classes/dcsoftProxool.properties
+			</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://xfire.codehaus.org/config/1.0">
+	<service>
+		<name>HelloWebService</name>
+		<serviceClass>com.service.IHelloWebService</serviceClass>
+		<implementationClass>com.service.HelloWebServiceImpl</implementationClass>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+	<service>
+		<name>GeneralOpSQL</name>
+		<serviceClass>com.service.IGeneralOpSQL</serviceClass>
+		<implementationClass>com.service.GeneralOpSQLImpl</implementationClass>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+	<service>
+		<name>GeneralOpFile</name>
+		<serviceClass>com.service.IGeneralOpFile</serviceClass>
+		<implementationClass>com.service.GeneralOpFileImpl
+		</implementationClass>
+		<style>wrapped</style>
+		<use>literal</use>
+		<scope>application</scope>
+	</service>
+</beans>
